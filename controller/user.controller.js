@@ -21,7 +21,7 @@ module.exports = {
         res.json(users);
     },
 
-    deleteUserById: async (req, res) => {
+    deleteUserById: async (req, res) =>{
         const {user_id} = req.params;
         const users = await readDataBase(db);
         const user = JSON.parse(users).filter(item => item.id !== +user_id);
